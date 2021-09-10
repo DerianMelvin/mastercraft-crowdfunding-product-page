@@ -1,6 +1,6 @@
 import CardReward from "./about/CardReward";
 
-const About = () => {
+const About = (): JSX.Element => {
   return (
     <div>
       <h3>About this project</h3>

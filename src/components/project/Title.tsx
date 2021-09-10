@@ -1,7 +1,7 @@
 import logoMastercraft from "../../images/logo-mastercraft.svg";
 import iBookmark from "../../images/icon-bookmark.svg";
 
-const Title = () => {
+const Title = (): JSX.Element => {
   return (
     <div>
       <div>

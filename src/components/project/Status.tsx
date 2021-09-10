@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Status = () => {
+const Status = (): JSX.Element => {
   const [funds, setFunds] = useState(89914);
   const [backers, setBackers] = useState(5007);
   const [days, setDays] = useState(56);

@@ -10,7 +10,7 @@ const CardReward = ({
   description,
   pledgeAmount,
   fundingLimit,
-}: Props) => {
+}: Props): JSX.Element => {
   return (
     <div>
       <div>
