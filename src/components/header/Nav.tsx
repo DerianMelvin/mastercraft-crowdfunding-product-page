@@ -1,6 +1,8 @@
+import headerStyles from "../../css/Header.module.css";
+
 const Nav = (): JSX.Element => {
   return (
-    <nav>
+    <nav className={headerStyles.nav}>
       <ul>
         <li>
           <a href="#link">About</a>
