@@ -134,7 +134,7 @@
   content: "";
   display: inline-block;
   width: 6rem;
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: 1px solid lightgray;
 }
 
 .statusInfo:last-child::after {
@@ -152,17 +152,22 @@
   }
 
   .statusInfo {
-    padding: 0 2rem;
+    padding: 0;
+    padding-left: 2rem;
     width: 33%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    border-right: 1px solid var(--dark-gray);
+    border-right: 1px solid lightgray;
   }
 
   .statusInfo > * {
     align-self: flex-start;
+  }
+
+  .statusInfo:first-child {
+    padding-left: 0;
   }
 
   .statusInfo:last-child {
