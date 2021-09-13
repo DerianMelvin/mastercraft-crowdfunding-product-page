@@ -4,14 +4,20 @@
   ============================
 */
 .container {
+  margin-bottom: 1.7rem;
   padding: 2rem;
   border-radius: 0.7rem;
   border: 1px solid whitesmoke;
   background-color: white;
 }
 
+.container > section {
+  height: 100%;
+  width: 100%;
+}
+
 .btn {
-  padding: 0 1.5rem;
+  padding: 0 2rem;
   margin: 0;
   display: flex;
   align-items: center;
@@ -105,5 +111,65 @@
     padding-left: 0.5rem;
     padding-right: 1.3rem;
     display: block;
+    font-weight: 700;
+  }
+}
+
+/*
+  ============================
+    Status
+  ============================
+*/
+.status {
+  display: flex;
+  flex-direction: column;
+}
+
+.statusInfo {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.statusInfo::after {
+  content: "";
+  display: inline-block;
+  width: 6rem;
+  border-bottom: 1px solid var(--dark-gray);
+}
+
+.statusInfo:last-child::after {
+  border-bottom: none;
+}
+
+.statusInfo > * {
+  padding: 0.2rem 0;
+}
+
+@media (min-width: 768px) {
+  .status {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .statusInfo {
+    padding: 0 2rem;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    border-right: 1px solid var(--dark-gray);
+  }
+
+  .statusInfo > * {
+    align-self: flex-start;
+  }
+
+  .statusInfo:last-child {
+    border-right: none;
+  }
+
+  .statusInfo::after {
+    display: none;
   }
 }
