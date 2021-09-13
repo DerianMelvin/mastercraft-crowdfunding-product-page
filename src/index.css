@@ -22,6 +22,18 @@ code {
     monospace;
 }
 
+h1, h2, button {
+  font-weight: 700;
+}
+
+span {
+  font-weight: 500;
+}
+
+p, span {
+  color: var(--dark-gray);
+}
+
 :root {
   --moderate-cyan: hsl(176, 50%, 47%);
   --dark-cyan: hsl(176, 72%, 28%);
