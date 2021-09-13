@@ -5,10 +5,11 @@
 */
 .container {
   margin-bottom: 1.7rem;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   border-radius: 0.7rem;
   border: 1px solid whitesmoke;
   background-color: white;
+  transform: translateY(-5rem);
 }
 
 .container > section {
@@ -31,6 +32,12 @@
 
 .btn:hover {
   background-color: var(--dark-cyan);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2.5rem;
+  }
 }
 
 /*
@@ -76,7 +83,7 @@
   position: absolute;
   width: 4rem;
   object-fit: contain;
-  transform: translateY(-4rem);
+  transform: translateY(-4.5rem);
 }
 
 .callToActions {
@@ -126,7 +133,6 @@
 }
 
 .statusInfo {
-  padding: 0.5rem;
   text-align: center;
 }
 
@@ -177,4 +183,13 @@
   .statusInfo::after {
     display: none;
   }
+}
+/*
+  ============================
+    About
+  ============================
+*/
+.about > h3,
+.about > p {
+  margin-bottom: 2rem;
 }
