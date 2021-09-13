@@ -1,0 +1,71 @@
+/*
+  ============================
+    CardReward
+  ============================
+*/
+.btn {
+  margin: 0;
+  padding: 1rem 2rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: var(--moderate-cyan);
+}
+
+.btn:hover {
+  background-color: var(--dark-cyan);
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid lightgray;
+  border-radius: 0.7rem;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.title,
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.title,
+.description,
+.information h2 {
+  margin-bottom: 1.3rem;
+}
+
+.title span {
+  color: var(--moderate-cyan);
+}
+
+.information {
+  font-size: 1.5rem;
+}
+
+.information span {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title,
+  .information {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .information h2 {
+    margin-bottom: 0;
+  }
+}
