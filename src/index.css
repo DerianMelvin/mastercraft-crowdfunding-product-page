@@ -12,6 +12,7 @@ html {
 body {
   font-family: "Commissioner", "Roboto", -apple-system, BlinkMacSystemFont,
     sans-serif;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: whitesmoke;
