@@ -1,10 +1,11 @@
-import cardStyles from '../../../css/Card.module.css';
+import cardStyles from "../../../css/Card.module.css";
 
 type Props = {
   reward: string;
   description: string;
   pledgeAmount: number;
   fundingLimit: number;
+  handleModal?(): void;
 };
 
 const CardReward = ({
@@ -12,7 +13,12 @@ const CardReward = ({
   description,
   pledgeAmount,
   fundingLimit,
+  handleModal,
 }: Props): JSX.Element => {
+  const displayModal = () => {
+    return handleModal !== undefined ? handleModal() : "";
+  };
+
   return (
     <div className={cardStyles.card}>
       <div className={cardStyles.content}>
@@ -25,7 +31,9 @@ const CardReward = ({
           <h2>
             {fundingLimit} <span>left</span>
           </h2>
-          <button className={cardStyles.btn}>Select Reward</button>
+          <button className={cardStyles.btn} onClick={() => displayModal()}>
+            Select Reward
+          </button>
         </div>
       </div>
     </div>
