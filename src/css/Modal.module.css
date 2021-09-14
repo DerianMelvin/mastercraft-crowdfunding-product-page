@@ -1,0 +1,31 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.container {
+  padding: 2rem 1.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid whitesmoke;
+  background-color: white;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
