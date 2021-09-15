@@ -20,7 +20,7 @@ const CardReward = ({
   };
 
   return (
-    <div className={cardStyles.card}>
+    <div className={cardStyles.cardReward}>
       <div className={cardStyles.content}>
         <div className={cardStyles.title}>
           <h3>{reward}</h3>
