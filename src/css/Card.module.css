@@ -1,6 +1,6 @@
 /*
   ============================
-    CardReward
+    Global
   ============================
 */
 .btn {
@@ -21,51 +21,127 @@
   background-color: var(--dark-cyan);
 }
 
-.card {
+.cardReward,
+.cardSelect {
   margin-bottom: 1.5rem;
   padding: 1.5rem;
   border: 1px solid lightgray;
   border-radius: 0.7rem;
 }
 
-.content {
-  height: 100%;
-  width: 100%;
+.cardReward .information h2,
+.cardSelect .information h2 {
+  font-size: 2rem;
 }
 
-.title,
-.information {
-  display: flex;
-  flex-direction: column;
-}
-
-.title,
-.description,
-.information h2 {
-  margin-bottom: 1.3rem;
+.cardReward .information span,
+.cardSelect .information span {
+  font-size: 1rem;
 }
 
 .title span {
   color: var(--moderate-cyan);
 }
 
-.information {
-  font-size: 1.5rem;
+/*
+  ============================
+    CardReward
+  ============================
+*/
+.content {
+  height: 100%;
+  width: 100%;
 }
 
-.information span {
-  font-size: 1rem;
+.cardReward .title,
+.cardReward .information {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardReward .title,
+.cardReward .description,
+.cardReward .information h2 {
+  margin-bottom: 1.3rem;
 }
 
 @media (min-width: 768px) {
-  .title,
-  .information {
+  .cardReward .title,
+  .cardReward .information {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .information h2 {
+  .cardReward .information h2 {
     margin-bottom: 0;
+  }
+}
+
+/*
+  ============================
+    CardSelect
+  ============================
+*/
+.cardSelect .selection,
+.cardSelect .title,
+.cardSelect .selectionGroup,
+.cardSelect .information {
+  display: flex;
+}
+
+.cardSelect .title,
+.cardSelect .selectionGroup,
+.cardSelect .information {
+  flex-direction: column;
+}
+
+.cardSelect .selection {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cardSelect .selection input {
+  margin-right: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.cardSelect .selectionGroup > h2 {
+  display: none;
+}
+
+.cardSelect .information {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .cardSelect .title,
+  .cardSelect .selectionGroup {
+    flex-direction: row;
+    align-items: baseline;
+  }
+  
+  .cardSelect .title h3 {
+    margin-right: 1rem;
+  }
+
+  .cardSelect .selectionGroup {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cardSelect .selectionGroup > h2 {
+    display: block;
+  }
+
+  .cardSelect .information h2 {
+    display: none;
+  }
+
+  .cardSelect .information p {
+    margin-bottom: 0;
+    margin-left: 2.3rem;
   }
 }
