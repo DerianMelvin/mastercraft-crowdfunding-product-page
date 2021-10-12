@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 import cardStyles from "../../css/Card.module.css";
 
 type Props = {
@@ -20,6 +20,14 @@ const CardSelect = ({
   radioName,
   handleRadioChange,
 }: Props): JSX.Element => {
+  const hasMinimumPledge = minimumPledge ? minimumPledge : 1;
+
+  const [pledgeAmount, setPledgeAmount] = useState<number>(hasMinimumPledge);
+
+  const handlePledgeAmount = (e: ChangeEvent<HTMLInputElement>): void => {
+    setPledgeAmount(parseInt(e.target.value));
+  };
+
   const renderMinimumPledge = (): RenderElementType => {
     return minimumPledge ? <span>Pledge ${minimumPledge} or more</span> : "";
   };
@@ -36,16 +44,18 @@ const CardSelect = ({
 
   const renderPledgeAmount = (): RenderElementType => {
     return radioName === rewardTitle ? (
-      <div>
+      <div className={cardStyles.pledgeAmount}>
         <span>Enter your pledge</span>
         <div>
           <input
             type="number"
             name="pledgeAmount"
-            value={minimumPledge ? minimumPledge : 1}
-            min={minimumPledge ? minimumPledge : 1}
+            value={pledgeAmount}
+            min={hasMinimumPledge}
+            onChange={handlePledgeAmount}
+            required
           />
-          <button>Continue</button>
+          <button className={cardStyles.btn}>Continue</button>
         </div>
       </div>
     ) : (
