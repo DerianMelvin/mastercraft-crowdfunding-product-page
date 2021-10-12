@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import modalStyles from "../css/Modal.module.css";
 import CardSelect from "./modal/CardSelect";
+import iCloseModal from "../images/icon-close-modal.svg";
 
 type Props = {
   handleModal(): void;
@@ -19,7 +20,11 @@ const ModalSelect = ({ handleModal }: Props): JSX.Element => {
         <div className={modalStyles.modalSelect}>
           <div className={modalStyles.titleGroup}>
             <h2>Back this project</h2>
-            <button onClick={() => handleModal()}>Close</button>
+            <img
+              src={iCloseModal}
+              alt="icon close modal"
+              onClick={() => handleModal()}
+            />
           </div>
           <p>
             Want to support us in bringing Mastercraft Bamboo Monitor Riser out
